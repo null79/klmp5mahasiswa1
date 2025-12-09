@@ -1,0 +1,14 @@
+[
+  {
+    "kd_produk": "A001",
+    "nm_brg": "kopi panas 500g",
+    "hrg": "100k",
+    "ket_stok": "menipis"
+  },
+  {
+    "kd_produk": "A002",
+    "nm_brg": "Keripik Pisang Manis",
+    "hrg": "12000",
+    "ket_stok": "habis"
+  }
+]
