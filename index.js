@@ -1,16 +1,15 @@
 const express = require("express");
+const vendorARouter = require("./routes/vendorA.routes");
+require("./db"); // ini supaya db.js dieksekusi & tabel dibuat
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// ambil data dari file JSON
-const vendorAProducts = require("./vendorA.json");
+app.use(express.json());
 
-// endpoint untuk Vendor A
-app.get("/vendor-a/products", (req, res) => {
-  res.json(vendorAProducts);
-});
+// PREFIX UTAMA: /api/vendor-a
+app.use("/api/vendor-a", vendorARouter);
 
-// nyalakan server
 app.listen(PORT, () => {
   console.log(`Vendor A API running at http://localhost:${PORT}`);
 });
